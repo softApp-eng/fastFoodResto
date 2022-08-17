@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+:root {
+    --color1: #072e3d;
+    --color2: #0d4454;
+    --color3:#a15531;
+    --color4:#bf9975;
+    --color5: #63402d;
+    --color6: #13100e;
+    --color7:#447780;
+    --color8:#686b5d;
+    --color9:#9e4323;
+  
+  }
+
+body{
+    background-image: linear-gradient(90deg, var(--color2) 0 60%, var(--color9) 50% 100%);
+    font-family: 'Shadows Into Light', cursive;
+    color: var(--color4);
+  }

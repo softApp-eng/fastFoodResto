@@ -1,0 +1,16 @@
+.header{
+
+  }
+  .header .navbar .navbar-brand{
+    color: var(--color4);
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 4.5rem;
+      padding-left: -0.5rem;
+    }
+  }
