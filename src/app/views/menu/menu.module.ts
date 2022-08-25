@@ -3,13 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { MenuRoutingModule } from './menu-routing.module';
 import { MenuComponentComponent } from './menuComponent/menu-component.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
+
+
 
 
 @NgModule({
-  declarations: [MenuComponentComponent],
+  declarations: [MenuComponentComponent,],
   imports: [
     CommonModule,
-    MenuRoutingModule
+    MenuRoutingModule,
+    CarouselModule
+     
   ]
 })
 export class MenuModule { }

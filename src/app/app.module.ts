@@ -6,10 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AboutComponentComponent } from './views/about/aboutComponent/about-component.component';
-import { LocationComponentComponent } from './views/location/locationComponent/location-component.component';
-import { SharedModuleModule } from './shared/shared-module.module';
+
 import { HeaderComponent } from './shared/component/header/header.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,9 +19,9 @@ import { HeaderComponent } from './shared/component/header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FlipBookModule,
+    CarouselModule,
     BrowserAnimationsModule,
-   
+    RouterModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

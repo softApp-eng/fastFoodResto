@@ -1,0 +1,19 @@
+.about{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.content{
+    background-color: red;
+    width: 800px;
+    height: 400px;
+}
+
+.content .part2{
+    background-image: url(/assets/about.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

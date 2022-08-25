@@ -11,5 +11,5 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  public url1: string = "/";
 }

@@ -13,7 +13,7 @@ const routes: Routes = [ {
     loadChildren : () => import('./views/about/about.module').then(m=> m.AboutModule)
   }]
 },{
-  path : 'location',
+  path : 'tacos',
   component : LocationComponentComponent,
   children : [{
     path : '',
@@ -29,14 +29,14 @@ const routes: Routes = [ {
   }]
 },
 {
-  path : 'menu',
+  path : 'pizza',
   component : MenuComponentComponent,
   children : [{
     path : '',
     loadChildren : () => import('./views/menu/menu.module').then(m=> m.MenuModule)
   }]
 },{
-  path : 'order',
+  path : 'hamburger',
   component : OrderComponentComponent,
   children : [{
     path : '',
