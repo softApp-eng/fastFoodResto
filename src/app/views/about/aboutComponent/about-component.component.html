@@ -1,14 +1,57 @@
-
-
-
-        <div class="about">
-            <div class="container">
-<div class="row content">
-    <div class="col-md-4 part1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta fugit atque vel sunt deleniti quo hic in tenetur nesciunt
-         iusto, cum odio numquam vero culpa, accusantium omnis doloribus incidunt voluptatum?</div>
-    <div class="col-md-8 part2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, ipsa sed, vero ad amet voluptatum natus eum error inventore quibusdam minus tenetur rem, odit quos optio laborum exercitationem sit dicta!</div>
-</div>
-            </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 order-md-1 col-md-6 col-lg-3">
+      <div class="card mb-3" style="" [@flipInX]="flipInX">
+        <div class="card-body">
+          <h5 class="card-title title">About Us</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
         </div>
-    
-  
+      </div>
+      <div class="card mb-3" style="" [@flipInX]="flipInX">
+        <div class="card-body">
+          <h5 class="card-title title">Contact Us</h5>
+          <p class="card-text"><i class="fa fa-phone"></i> : 202-555-0138</p>
+          <p class="card-text"><i class="fa fa-youtube"></i> : fastFoodYtb</p>
+          <p class="card-text">
+            <i class="fa fa-instagram"></i> : fastFoodInst
+          </p>
+          <p class="card-text"><i class="fa fa-twitter"></i> : fastFoodTwit</p>
+          <p class="card-text">
+            <i class="fa fa-pinterest"></i> : fastFoodPint
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 order-md-2 col-md-6 col-lg-6  banner" [@zoomIn]="zoomIn">
+      <div class="shap"></div>
+    </div>
+    <div class="col-xs-12 col-sm-12 order-md-3 col-md-6 col-lg-3">
+      <h5 class="mb-3 title text-center">Location</h5>
+      <div *ngFor="let number of [0, 1, 2, 3, 4]; let i = index">
+        <div class="card mb-3" style="" [@flipInX]="flipInX">
+          <div class="row g-0">
+            <div class="col-4">
+              <div class="ps-5 pt-3" style="color: #0d4454">
+                <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h6 class="card-title">
+                  {{ i + 1 }} - 2300 Clarksburg Park Road
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,13 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
+import { IModalDialogSettings, ModalDialogService } from 'ngx-modal-dialog';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-
+import { ModalComponent } from 'src/app/components/modal/modal.component';
+import { trigger, transition, useAnimation } from '@angular/animations';
+import { bounce, fadeInDown, flipInX, rotateInDownLeft, rotateInUpRight, zoomIn } from 'ngx-animate';
 
 @Component({
   selector: 'app-menu-component',
   templateUrl: './menu-component.component.html',
-  styleUrls: ['./menu-component.component.css']
+  styleUrls: ['./menu-component.component.css'], animations: [
+     trigger('flipInX', [transition('* => *', useAnimation(flipInX))]),  
+     trigger('zoomIn', [transition('* => *', useAnimation(zoomIn))])
+  ],
 })
 export class MenuComponentComponent implements OnInit {
+  flipInX: any;
+  zoomIn: any;
   slidesStore = [{
     description: "h1 title",
     src: '/assets/01-left.jpeg',
@@ -28,45 +36,31 @@ export class MenuComponentComponent implements OnInit {
     src: '/assets/04-left.jpeg',
     title: 'pic 1'
   }]
+ 
 
 
 
-  constructor() { }
-
+  constructor(public modalService: ModalDialogService, public viewRef: ViewContainerRef) { }
+  //settings? : IModalDialogSettings[] | undefined;
   ngOnInit(): void {
   }
+  openNewDialog() {
+    this.modalService.openDialog(this.viewRef, {
+      title: 'Description ',
+      childComponent: ModalComponent,
+     
+       
+
+      
+    });
+   
+  }
+  
   public items!: any[];
 
   public append() {
     this.items.push(4);
   }
-
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: true,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    navSpeed: 700,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true,
-    navText: ['', ''],
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 4
-      }
-    },
-    nav: false
-  }
+ 
+  
 }

@@ -8,7 +8,16 @@
 
 }
 .card{
-    max-width: 540px;background-color: transparent;border: none;
+    padding-top: 8px;
+    max-width: 540px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.card:hover{
+    box-shadow: 4px 7px 5px 1px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 4px 7px 5px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 4px 7px 5px 1px rgba(0,0,0,0.3);
 }
 .shap {
     /*   background-image: rgba(0, 0, 0, 0.8); */
@@ -47,3 +56,43 @@
 
 }
 
+/** reponsive */
+
+@media (max-width: 576px) { 
+   
+    .banner {
+       display: none;
+    }
+    
+ }
+
+ 
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .banner {
+        display: none;
+     }
+     
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .banner {
+       display: block;
+     }
+     .title{
+        text-align: center !important;
+     }
+ }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .title{
+        text-align: center !important;
+     }
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    
+ }
